@@ -20,7 +20,7 @@ export default function ChatApp() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const socket = new WebSocket("ws://10.163.14.113:5000");
+    const socket = new WebSocket("wss://chatappbackend-rpft.onrender.com");
     socketRef.current = socket;
 
     socket.onmessage = (event) => {
